@@ -1,0 +1,9 @@
+//express works on the idea of middlewares means that we have a request and some middlewares in between to handle the reqeust and then
+//we can send the response.
+
+//we also has a next method in middlware , if we execute next then the request will be passes to next middlware
+
+//if we send the res with res.send() and the we call next then we will get the error as we cant send more than one response 
+//for one reqest.
+
+//in middleware we also have paths optional argument to only use middlware that has the matching path.
