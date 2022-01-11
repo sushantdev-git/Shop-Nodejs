@@ -10,6 +10,8 @@ const storeRoutes = require('./routes/store')
 
 app.use(bodyParser.urlencoded({extended:false})); // added a body parser to to parse the body of incoming request.
 
+app.use(express.static(path.join(__dirname, 'public'))); //adding path for static files so we can access them in html files.
+
 app.use('/admin',adminRoutes) //we can also strip route with common path, all the routes with /admin will go for adminRoutes
 app.use(storeRoutes)
 
